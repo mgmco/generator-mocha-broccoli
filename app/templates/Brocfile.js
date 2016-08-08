@@ -23,7 +23,7 @@ const stylePaths = [
   'node_modules/yoga-sass/assets',
 ];
 
-var modules = makeModules('src', {
+const modules = makeModules('src', {
   moduleType: 'cjs',
   compatFix: true
 });
