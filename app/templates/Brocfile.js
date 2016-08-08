@@ -4,6 +4,7 @@ const Autoprefixer = require('broccoli-autoprefixer');
 const browserify = require('broccoli-browserify');
 const Concat = require('broccoli-sourcemap-concat');
 const CssOptimizer = require('broccoli-csso');
+const Funnel = require('broccoli-funnel');
 const LiveReload = require('broccoli-inject-livereload');
 const makeModules = require('broccoli-es6-module-filter');
 const Merge = require('broccoli-merge-trees');
