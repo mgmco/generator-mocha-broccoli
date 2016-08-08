@@ -75,7 +75,6 @@ ProjectGenerator.prototype.project = function project() {
     'tests',
     'src',
   ];
-  var _this = this;
 
   this.template('_package.json', 'package.json');
   this.template('_.sass-lint.yml', '.sass-lint.yml');
@@ -85,8 +84,8 @@ ProjectGenerator.prototype.project = function project() {
   this.copy('_.eslintrc', '.eslintrc');
   this.copy('_.gitignore', '.gitignore');
 
-  copyDir.forEach(function(file) {
-    _this.bulkDirectory(file, file);
+  copyDir.forEach(file => {
+    this.bulkDirectory(file, file);
   });
 
   this.composeWith('git-init', {
