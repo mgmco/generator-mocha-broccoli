@@ -2,7 +2,6 @@
 
 var util = require('util');
 var path = require('path');
-var _ = require('lodash');
 var utils = require('keystone-utils');
 var yeoman = require('yeoman-generator');
 var wiring = require('html-wiring');
@@ -49,11 +48,11 @@ ProjectGenerator.prototype.prompts = function prompts() {
 
   };
 
-  this.prompt(prompts.project, function(props) {
+  this.prompt(prompts.project, props => {
 
-    _.each(props, function(val, key) {
-      this[key] = val;
-    }, this);
+    Object.keys(props).forEach(key => {
+      this[key] = props[key];
+    });
 
     // Keep an unescaped version of the project name
     this._projectName = this.projectName;
@@ -66,7 +65,7 @@ ProjectGenerator.prototype.prompts = function prompts() {
     if (!prompts.config.length) {
       return cb();
     }
-  }.bind(this));
+  });
 
 };
 
@@ -98,15 +97,14 @@ ProjectGenerator.prototype.project = function project() {
 
   // This callback is fired when the generator has completed,
   // and includes instructions on what to do next.
-  var done = _.bind(function done() {
+  var done = function() {
     console.log(
     '\n------------------------------------------------' +
     '\n' +
     '\nYour QUnit project is ready to go!' +
     '\n' +
     '\nTo start the server run: npm run start');
-
-  }, this);
+  };
 
   this.installDependencies({
     bower: false,
