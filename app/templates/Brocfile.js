@@ -7,8 +7,8 @@ const CssOptimizer = require('broccoli-csso');
 const LiveReload = require('broccoli-inject-livereload');
 const makeModules = require('broccoli-es6-module-filter');
 const Merge = require('broccoli-merge-trees');
-const Sass = require('broccoli-sass-source-maps');
 const rename = require('broccoli-stew').rename;
+const Sass = require('broccoli-sass-source-maps');
 
 let pubFiles = new LiveReload('public');
 
