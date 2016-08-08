@@ -1,12 +1,12 @@
 'use strict';
 
-var util = require('util');
-var path = require('path');
-var utils = require('keystone-utils');
-var yeoman = require('yeoman-generator');
-var wiring = require('html-wiring');
+const util = require('util');
+const path = require('path');
+const utils = require('keystone-utils');
+const yeoman = require('yeoman-generator');
+const wiring = require('html-wiring');
 
-var ProjectGenerator = module.exports = function ProjectGenerator(args, options, config) {
+const ProjectGenerator = module.exports = function ProjectGenerator(args, options, config) {
 
   // Set utils for use in templates
   this.utils = utils;
@@ -27,9 +27,9 @@ util.inherits(ProjectGenerator, yeoman.generators.Base);
 
 ProjectGenerator.prototype.prompts = function prompts() {
 
-  var cb = this.async();
+  const cb = this.async();
 
-  var prompts = {
+  const prompts = {
 
     project: [
       {
@@ -70,7 +70,7 @@ ProjectGenerator.prototype.prompts = function prompts() {
 };
 
 ProjectGenerator.prototype.project = function project() {
-  var copyDir = [
+  const copyDir = [
     'styles',
     'tests',
     'src',
@@ -96,7 +96,7 @@ ProjectGenerator.prototype.project = function project() {
 
   // This callback is fired when the generator has completed,
   // and includes instructions on what to do next.
-  var done = function() {
+  const done = function() {
     console.log(
     '\n------------------------------------------------' +
     '\n' +
