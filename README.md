@@ -1,12 +1,12 @@
-# SASS Broccoli Qunit Generator
+# SASS Broccoli Mocha Generator
 
-This Yeoman generator will create a simple Broccoli project that comes setup for web development with SASS, ES6 modules (using Babel transpiling), QUnit (but ).
+This Yeoman generator will create a simple Broccoli project that comes setup for web development with SASS, ES6 modules (using Babel transpiling) and Mocha.
 It also will install [Yoga Sass](http://rtablada.github.io/yoga-sass), [Font Awesome](http://fontawesome.io), and [Normalize CSS](https://necolas.github.io/normalize.css/).
 
 ## Installing the Generator
 
 ```bash
-npm install -g broccoli-cli yo generator-qunit-broccoli
+npm install -g broccoli-cli yo generator-mocha-broccoli
 ```
 
 ## Creating Projects
