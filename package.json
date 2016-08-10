@@ -1,6 +1,6 @@
 {
   "name": "generator-mocha-broccoli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Yeoman generator for Mocha and SASS projects built with Broccoli",
   "files": [
     "app"
