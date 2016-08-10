@@ -80,7 +80,6 @@ ProjectGenerator.prototype.project = function project() {
   this.template('_.sass-lint.yml', '.sass-lint.yml');
   this.template('public/index.html', 'public/index.html');
   this.copy('Brocfile.js', 'Brocfile.js');
-  this.copy('testem.json', 'testem.json');
   this.copy('_.eslintrc', '.eslintrc');
   this.copy('_.gitignore', '.gitignore');
 
