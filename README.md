@@ -32,6 +32,16 @@ npm run start
 The `Brocfile.js` injects live reload into HTML files in the `public` directory.
 This command is backed by `ember-cli` which will fire a reload whenever Broccoli rebuilds any trees.
 
+## Running test
+
+We use Mocha for running tests, just run them with this command:
+
+```bash
+npm run test
+```
+
+The command gets the tests from the `tests` directory and converts them into ES6 so mocha can use it.
+
 ## Building the Project
 
 To build the project into a final production build, run:
