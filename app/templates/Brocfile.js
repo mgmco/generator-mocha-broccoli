@@ -2,20 +2,14 @@
 
 const Autoprefixer = require('broccoli-autoprefixer');
 const browserify = require('broccoli-browserify');
-const Concat = require('broccoli-sourcemap-concat');
 const CssOptimizer = require('broccoli-csso');
-const Funnel = require('broccoli-funnel');
 const LiveReload = require('broccoli-inject-livereload');
 const makeModules = require('broccoli-es6-module-filter');
 const Merge = require('broccoli-merge-trees');
-const rename = require('broccoli-stew').rename;
 const Sass = require('broccoli-sass-source-maps');
 
-let pubFiles = new LiveReload('public');
-
-if (process.env.EMBER_ENV === 'production') {
-  pubFiles = 'public';
-}
+const isProduction = process.env.EMBER_ENV === 'production';
+const pubFiles = (isProduction) ? new LiveReload('public') : 'public';
 
 const stylePaths = [
   'styles',
@@ -38,19 +32,4 @@ const compiledSass = new Sass(stylePaths, 'app.scss', 'app.css', {});
 const optimizedCSS = new CssOptimizer(compiledSass);
 const styles = new Autoprefixer(optimizedCSS);
 
-if (process.env.EMBER_ENV === 'test') {
-  const testTree = rename('tests', 'index.html', 'test.html');
-
-  const testJs = Concat(testTree, {
-    inputFiles: ['**/*.js'],
-    outputFile: '/tests.js',
-  });
-
-  const testHTML = new Funnel(testTree, {
-    files: ['test.html'],
-  });
-
-  module.exports = new Merge([pubFiles, styles, js, testJs, testHTML]);
-} else {
-  module.exports = new Merge([pubFiles, styles, js]);
-}
+module.exports = new Merge([pubFiles, styles, js]);
