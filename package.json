@@ -22,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/mgmco/generator-mocha-broccoli/issues"
   },
-  "homepage": "https://github.com/mgmco/generator-mocha-broccoli#readme"
+  "homepage": "https://github.com/mgmco/generator-mocha-broccoli#readme",
+  "main": "public/index.html",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
