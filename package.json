@@ -26,6 +26,6 @@
   "main": "public/index.html",
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postversion": "git push && git push --tags"
   }
 }
