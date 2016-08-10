@@ -1,14 +1,14 @@
 {
-  "name": "generator-qunit-broccoli",
-  "version": "6.0.0",
-  "description": "A Yeoman generator for QUnit & SASS projects built with Broccoli",
+  "name": "generator-mocha-broccoli",
+  "version": "1.0.0",
+  "description": "A Yeoman generator for Mocha & SASS projects built with Broccoli",
   "files": [
     "app"
   ],
   "keywords": [
     "yeoman-generator"
   ],
-  "author": "Ryan Tablada",
+  "author": "Adriaan van Rossum",
   "license": "MIT",
   "dependencies": {
     "generator-git-init": "^1.1.3",
@@ -17,10 +17,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rtablada/generator-qunit-broccoli.git"
+    "url": "git+https://github.com/mgmco/generator-mocha-broccoli.git"
   },
   "bugs": {
-    "url": "https://github.com/rtablada/generator-qunit-broccoli/issues"
+    "url": "https://github.com/mgmco/generator-mocha-broccoli/issues"
   },
-  "homepage": "https://github.com/rtablada/generator-qunit-broccoli#readme"
+  "homepage": "https://github.com/mgmco/generator-mocha-broccoli#readme"
 }
