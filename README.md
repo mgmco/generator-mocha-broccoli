@@ -3,7 +3,7 @@
 > Note: this is the Mocha version of the original [Qunit version](https://github.com/rtablada/generator-qunit-broccoli). Not in NPM yet.
 
 This Yeoman generator will create a simple Broccoli project that comes setup for web development with SASS, ES6 modules (using Babel transpiling) and Mocha.
-It also will install [Yoga Sass](http://rtablada.github.io/yoga-sass), [Font Awesome](http://fontawesome.io), and [Normalize CSS](https://necolas.github.io/normalize.css/).
+It also will install [Yoga Sass](http://rtablada.github.io/yoga-sass), [Font Awesome](http://fontawesome.io), and [Normalize CSS](https://necolas.github.io/normalize.css/). Just take a look at the `src` and `tests` directory.
 
 ## Installing the Generator
 
