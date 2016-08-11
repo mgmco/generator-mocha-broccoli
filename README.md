@@ -16,7 +16,7 @@ npm install -g broccoli-cli yo generator-mocha-broccoli
 To create a project with this generator run:
 
 ```bash
-yo qunit-broccoli
+yo mocha-broccoli
 ```
 
 This will ask you for your project name, and a few details to get up and started.
